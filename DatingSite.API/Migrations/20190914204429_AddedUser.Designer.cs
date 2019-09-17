@@ -22,9 +22,9 @@ namespace DatingSite.API.Migrations
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd();
 
-                    b.Property<string>("PasswordHash");
+                    b.Property<byte[]>("PasswordHash");
 
-                    b.Property<string>("PasswordSalt");
+                    b.Property<byte[]>("PasswordSalt");
 
                     b.Property<string>("Username");
 
