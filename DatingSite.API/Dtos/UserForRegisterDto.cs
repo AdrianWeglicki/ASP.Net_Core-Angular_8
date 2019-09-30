@@ -7,7 +7,7 @@ namespace DatingSite.API.Dtos
         [Required(ErrorMessage="Nazwa użytkownika jest wymagana")]
         public string Username { get; set; }
         [Required(ErrorMessage="Hasło jest wymagane")]
-        [StringLength(12, MinimumLength=6, ErrorMessage="Hasło musi się składać od 4 do 8 znakow")]
+        [StringLength(12, MinimumLength=6, ErrorMessage="Hasło musi się składać od 4 do 12 znakow")]
         public string Password { get; set; } 
     }
 }

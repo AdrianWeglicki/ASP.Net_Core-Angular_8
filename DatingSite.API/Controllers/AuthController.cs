@@ -76,6 +76,5 @@ namespace DatingSite.API.Controllers
             var token = tokenHandler.CreateToken(tokenDescription);
             return Ok(new {token = tokenHandler.WriteToken(token)});
         }
-
     }
 }
