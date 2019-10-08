@@ -1,0 +1,43 @@
+p::first-letter {
+    text-transform: uppercase;
+}
+
+.img-thumbnail {
+    margin: 5%;
+    width: 90%;
+    height: 90%;
+}
+.card-body {
+    margin: 5%;
+}
+
+.card-footer{
+    padding: 0 15px;
+    border-top: none;
+    margin-bottom: 10px;
+}
+
+.danger {
+    border-radius: 8px;
+    background-color: lightcoral;
+    color:white;
+  }
+
+.danger:hover {
+    background-color: white;
+    color:lightcoral;
+    border: 1px solid lightcoral;
+}
+.primary {
+    border-radius: 8px;
+    background-color: lightblue;
+    color:white;
+  }
+.primary:hover {
+    background-color: white;
+    color: lightskyblue;
+    border: 1px solid lightblue;
+  }
+.btn-group {
+    margin: 2%;
+}

@@ -32,7 +32,7 @@ namespace DatingSite.API.Controllers
             userForRegisterDto.Username = userForRegisterDto.Username.ToLower();
             if(await _authRepository.UserExists(userForRegisterDto.Username))
             {
-                return BadRequest("Użytkownik o tej nazwie istnieje!");
+                return BadRequest("Usersname is Exists!");
             }
             
             var userToCreate = new User

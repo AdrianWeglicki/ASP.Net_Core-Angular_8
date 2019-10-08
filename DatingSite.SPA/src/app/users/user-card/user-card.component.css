@@ -1,0 +1,38 @@
+.card img {
+    transform: scale(1.0, 1.0);
+    transition-duration: 700ms;
+    transition-timing-function: ease-in-out;
+}
+.card:hover img {
+    transform: scale(1.3, 1.3);
+    transition-duration: 400ms;
+    transition-timing-function: ease-in-out;
+    opacity: 0.9;
+}
+.card-img-wrapper {
+    overflow: hidden;
+    position: relative;
+}
+.user-icons {
+    position: absolute;
+    bottom: -30%;
+    left: 0;
+    right: 0;
+    opacity: 0;
+}
+.fa-heart:hover {
+    color: lightcoral;
+}
+.fa-user:hover {
+    color: lightskyblue
+}
+.fa-envelope:hover {
+    color: lightslategrey;
+}
+.card-img-wrapper:hover .user-icons {
+    bottom: 0;
+    opacity: 0.9;
+}
+.animate {
+   transition: all 0.4s ease-in-out;
+}

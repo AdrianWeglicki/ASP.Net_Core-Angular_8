@@ -11,9 +11,15 @@ namespace DatingSite.API.Helpers
         {
             CreateMap<User, UsersForListDto>().ForMember(dest => dest.PhotoUrl, opt => { 
                 opt.MapFrom(src => src.Photos.FirstOrDefault(p => p.IsMain).Url);
+            })
+            .ForMember(dest=> dest.Age, opt => {
+                opt.ResolveUsing(src => src.DateOfBirth.CalculateAge());
             });
             CreateMap<User, UserForDetailedDto>().ForMember(dest => dest.PhotoUrl, opt => { 
                 opt.MapFrom(src => src.Photos.FirstOrDefault(p => p.IsMain).Url);
+            })
+            .ForMember(dest=> dest.Age, opt => {
+                opt.ResolveUsing(src => src.DateOfBirth.CalculateAge());
             });
         }
     }
