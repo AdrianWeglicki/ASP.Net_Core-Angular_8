@@ -26,16 +26,109 @@
           </div>
 
         </div>
-          <div class="card-content mb-2">
-            <div class="btn-group d-flex flex-row" role="group">
+        <div class="container">
+          <div class="block-buttons">
+            <div class="btn-group mb-2" role="group">
               <button class="btn danger">Like<i class="fa fa-heart ml-2"></i></button>
-              <button class="btn primary">Message<i class="fa fa-envelope ml-2"></i></button>     
-            </div>     
-        </div>       
+              <button class="btn primary">Message<i class="fa fa-envelope ml-2"></i></button>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
     <div class="col-sm-8">
-      Others details user
+      <div class="tab-panel">
+        <tabset class="user-tabset">
+          <tab class="m-3" heading="Details" id="tab1">
+            <table class="user-table">
+              <tr>
+                <td class="user-table-td">
+                  <h5>Growth:</h5>
+                  <p>{{user.growth}} cm</p>
+                </td>
+                <td>
+                  <h5>Languages: </h5>
+                  <p>{{user.languages || "English"}}</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <h5>Education:</h5>
+                  <p>{{user.education}}</p>
+                </td>
+                <td>
+                  <h5>Profession:</h5>
+                  <p>{{user.profession}}</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <h5>Marital status:</h5>
+                  <p>{{user.maritalStatus}}</p>
+                </td>
+                <td>
+                  <h5>Children: </h5>
+                  <p>{{user.children}}</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <h5>Hair color:</h5>
+                  <p>{{user.hairColor}}</p>
+                </td>
+                <td>
+                  <h5>Eye color:</h5>
+                  <p>{{user.eyeColor}}</p>
+                </td>
+              </tr>
+            </table>
+          </tab>
+          <tab class="m-3" heading="About me" id="tab2">                     
+                  <h5>Motto:</h5>
+                  <p>{{user.motto}}</p>
+                  <h5>Description:</h5>
+                  <p>{{user.description}}</p>
+                  <h5>Personality:</h5>
+                  <p>{{user.personality}}</p>
+                  <h5>Looking for:</h5>
+                  <p>{{user.lookingFor}}</p>
+                  <h5>Personality:</h5>
+                  <p>{{user.personality}}</p>
+          </tab>
+          <tab class="m-3" heading="Interests" id="tab3">                     
+            <h5>Interests:</h5>
+            <p>{{user.interests}}</p>
+            <h5>Free time:</h5>
+            <p>{{user.freeTime}}</p>
+            <h5>Sport:</h5>
+            <p>{{user.sport}}</p>
+            <h5>Movies:</h5>
+            <p>{{user.movies}}</p>
+            <h5>Music:</h5>
+            <p>{{user.music}}</p>
+            <h5>Personality:</h5>
+            <p>{{user.personality}}</p>
+          </tab>
+          <tab class="m-3" heading="Preferences" id="tab4">                     
+            <h5>I like:</h5>
+            <p>{{user.iLike}}</p>
+            <h5>I don't like:</h5>
+            <p>{{user.idoNotLike}}</p>
+            <h5>Makes me laugh:</h5>
+            <p>{{user.makesMeLaugh}}</p>
+            <h5>It feels best in:</h5>
+            <p>{{user.itFeelsBestIn}}</p>
+            <h5>Friend would describe me:</h5>
+            <p>{{user.friendWouldDescribeMe}}</p>
+          </tab>
+          <tab class="m-3" heading="Photos" id="tab5"> 
+            <p>Photos </p>
+          </tab>
+          <tab class="m-3" heading="Messages" id="tab6"> 
+              <p>Messages</p>
+            </tab>
+        </tabset>
+      </div>
     </div>
   </div>
 </div>>

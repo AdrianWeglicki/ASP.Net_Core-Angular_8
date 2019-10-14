@@ -32,12 +32,31 @@ p::first-letter {
     border-radius: 8px;
     background-color: lightblue;
     color:white;
+    width: 50%;
   }
 .primary:hover {
     background-color: white;
     color: lightskyblue;
     border: 1px solid lightblue;
-  }
-.btn-group {
-    margin: 2%;
+    width: 50%;
 }
+
+.block-buttons {
+	position: relative;
+}
+.block-buttons .btn-group {
+    width: 100%;
+}
+
+.block-buttons button {
+	width: 50%;
+}
+
+.user-table {
+    width: 100%;
+    margin: 30px;
+}
+.user-table-td {
+    width: 50%;
+}
+

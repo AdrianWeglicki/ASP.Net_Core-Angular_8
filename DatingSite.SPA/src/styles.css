@@ -4,3 +4,17 @@
 @import '../node_modules/font-awesome/css/font-awesome.min.css';
 @import '../node_modules/alertifyjs/build/css/alertify.min.css';
 @import '../node_modules/alertifyjs/build/css/themes/bootstrap.min.css';
+
+.nav-tabs > li.open, .user-tabset > .nav-tabs > li:hover {
+    border-bottom: 4px solid lightblue;
+}
+
+.user-tabset > .nav-tabs > li.open > a, .user-tabset > .nav-tabs> li:hover > a {
+    background: none !important;
+    color: #333333;
+}
+
+.user-tabset > .nav-tabs > li.active {
+    border-bottom: 4px solid lightblue;
+    position: relative;
+}

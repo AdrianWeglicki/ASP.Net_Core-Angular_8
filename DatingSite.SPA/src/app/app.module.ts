@@ -17,10 +17,13 @@ import { appRoutes } from './routes';
 import { LikesComponent } from './likes/likes.component';
 import { MessagesComponent } from './messages/messages.component';
 import { AuthGuard } from './_guards/auth.guard';
-import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
+import { BsDropdownModule, TabsModule } from 'ngx-bootstrap';
 import { ErrorInterceptorProvider } from './_services/error.interceptor';
 import { UserCardComponent } from './users/user-card/user-card.component';
 import { UserDetailComponent } from './users/user-detail/user-detail.component';
+import { UserDetailResolver } from './_resolvers/user-list.resolver';
+import { UserListResolver } from './_resolvers/user-detail.resolver';
+
 
 
 export function tokenGetter() {
@@ -51,14 +54,17 @@ export function tokenGetter() {
          }
       }),
       RouterModule.forRoot(appRoutes),
-      BsDropdownModule.forRoot()
+      BsDropdownModule.forRoot(),
+      TabsModule.forRoot()
    ],
    providers: [
       AuthService,
       AlertifyService,
       UserService,
       AuthGuard,
-      ErrorInterceptorProvider
+      ErrorInterceptorProvider,
+      UserDetailResolver,
+      UserListResolver
    ],
    bootstrap: [
       AppComponent
